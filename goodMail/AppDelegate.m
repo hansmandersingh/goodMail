@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import <GoogleSignIn/GoogleSignIn.h>
 
 @interface AppDelegate ()
 
@@ -16,9 +17,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [GIDSignIn.sharedInstance restorePreviousSignInWithCompletion:^(GIDGoogleUser * _Nullable user,
+                                                                      NSError * _Nullable error) {
+        if (error) {
+          // Show the app's signed-out state.
+        } else {
+          // Show the app's signed-in state.
+        }
+      }];
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+  BOOL handled;
+
+  handled = [GIDSignIn.sharedInstance handleURL:url];
+  if (handled) {
+    return YES;
+  }
+
+  // Handle other custom URL types.
+
+  // If not handled by this app, return NO.
+  return NO;
+}
 
 #pragma mark - UISceneSession lifecycle
 

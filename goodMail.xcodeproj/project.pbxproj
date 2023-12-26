@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1B63D83579BC5DC18303D4 /* Pods_goodMail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346EE1C57CC7C9D49AFF2F6A /* Pods_goodMail.framework */; };
+		D63848722B2ED8FA0084F824 /* InboxesPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63848712B2ED8FA0084F824 /* InboxesPageViewController.m */; };
 		D6B7C9222B2EC95F00A3E1CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B7C9212B2EC95F00A3E1CD /* AppDelegate.m */; };
 		D6B7C9252B2EC95F00A3E1CD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B7C9242B2EC95F00A3E1CD /* SceneDelegate.m */; };
 		D6B7C9282B2EC95F00A3E1CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B7C9272B2EC95F00A3E1CD /* ViewController.m */; };
-		D6B7C92B2B2EC95F00A3E1CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B7C9292B2EC95F00A3E1CD /* Main.storyboard */; };
 		D6B7C92D2B2EC96100A3E1CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6B7C92C2B2EC96100A3E1CD /* Assets.xcassets */; };
 		D6B7C9302B2EC96100A3E1CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B7C92E2B2EC96100A3E1CD /* LaunchScreen.storyboard */; };
 		D6B7C9332B2EC96100A3E1CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B7C9322B2EC96100A3E1CD /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		346EE1C57CC7C9D49AFF2F6A /* Pods_goodMail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_goodMail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C32A7B0F25F510ECE616209 /* Pods-goodMail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goodMail.debug.xcconfig"; path = "Target Support Files/Pods-goodMail/Pods-goodMail.debug.xcconfig"; sourceTree = "<group>"; };
+		D30CE37B3FDA370E863BC791 /* Pods-goodMail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goodMail.release.xcconfig"; path = "Target Support Files/Pods-goodMail/Pods-goodMail.release.xcconfig"; sourceTree = "<group>"; };
+		D63848702B2ED8FA0084F824 /* InboxesPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InboxesPageViewController.h; sourceTree = "<group>"; };
+		D63848712B2ED8FA0084F824 /* InboxesPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InboxesPageViewController.m; sourceTree = "<group>"; };
 		D6B7C91D2B2EC95F00A3E1CD /* goodMail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goodMail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B7C9202B2EC95F00A3E1CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6B7C9212B2EC95F00A3E1CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -24,7 +30,6 @@
 		D6B7C9242B2EC95F00A3E1CD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		D6B7C9262B2EC95F00A3E1CD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D6B7C9272B2EC95F00A3E1CD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D6B7C92A2B2EC95F00A3E1CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6B7C92C2B2EC96100A3E1CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6B7C92F2B2EC96100A3E1CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6B7C9312B2EC96100A3E1CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1B63D83579BC5DC18303D4 /* Pods_goodMail.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEAE672AE5B65AA05805C44E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				346EE1C57CC7C9D49AFF2F6A /* Pods_goodMail.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D6B7C9142B2EC95F00A3E1CD = {
 			isa = PBXGroup;
 			children = (
 				D6B7C91F2B2EC95F00A3E1CD /* goodMail */,
 				D6B7C91E2B2EC95F00A3E1CD /* Products */,
+				F70C4E55A0A950E4D096DE45 /* Pods */,
+				BEAE672AE5B65AA05805C44E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,13 +83,23 @@
 				D6B7C9242B2EC95F00A3E1CD /* SceneDelegate.m */,
 				D6B7C9262B2EC95F00A3E1CD /* ViewController.h */,
 				D6B7C9272B2EC95F00A3E1CD /* ViewController.m */,
-				D6B7C9292B2EC95F00A3E1CD /* Main.storyboard */,
 				D6B7C92C2B2EC96100A3E1CD /* Assets.xcassets */,
 				D6B7C92E2B2EC96100A3E1CD /* LaunchScreen.storyboard */,
 				D6B7C9312B2EC96100A3E1CD /* Info.plist */,
 				D6B7C9322B2EC96100A3E1CD /* main.m */,
+				D63848702B2ED8FA0084F824 /* InboxesPageViewController.h */,
+				D63848712B2ED8FA0084F824 /* InboxesPageViewController.m */,
 			);
 			path = goodMail;
+			sourceTree = "<group>";
+		};
+		F70C4E55A0A950E4D096DE45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C32A7B0F25F510ECE616209 /* Pods-goodMail.debug.xcconfig */,
+				D30CE37B3FDA370E863BC791 /* Pods-goodMail.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6B7C9362B2EC96100A3E1CD /* Build configuration list for PBXNativeTarget "goodMail" */;
 			buildPhases = (
+				161615A0C8DAB88D271C3086 /* [CP] Check Pods Manifest.lock */,
 				D6B7C9192B2EC95F00A3E1CD /* Sources */,
 				D6B7C91A2B2EC95F00A3E1CD /* Frameworks */,
 				D6B7C91B2B2EC95F00A3E1CD /* Resources */,
+				36F0D7824324766946592098 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,11 +163,52 @@
 			files = (
 				D6B7C9302B2EC96100A3E1CD /* LaunchScreen.storyboard in Resources */,
 				D6B7C92D2B2EC96100A3E1CD /* Assets.xcassets in Resources */,
-				D6B7C92B2B2EC95F00A3E1CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		161615A0C8DAB88D271C3086 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-goodMail-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36F0D7824324766946592098 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-goodMail/Pods-goodMail-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-goodMail/Pods-goodMail-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-goodMail/Pods-goodMail-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D6B7C9192B2EC95F00A3E1CD /* Sources */ = {
@@ -147,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6B7C9282B2EC95F00A3E1CD /* ViewController.m in Sources */,
+				D63848722B2ED8FA0084F824 /* InboxesPageViewController.m in Sources */,
 				D6B7C9222B2EC95F00A3E1CD /* AppDelegate.m in Sources */,
 				D6B7C9332B2EC96100A3E1CD /* main.m in Sources */,
 				D6B7C9252B2EC95F00A3E1CD /* SceneDelegate.m in Sources */,
@@ -156,14 +226,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D6B7C9292B2EC95F00A3E1CD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6B7C92A2B2EC95F00A3E1CD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D6B7C92E2B2EC96100A3E1CD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +349,7 @@
 		};
 		D6B7C9372B2EC96100A3E1CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C32A7B0F25F510ECE616209 /* Pods-goodMail.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,7 +360,7 @@
 				INFOPLIST_FILE = goodMail/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -314,6 +377,7 @@
 		};
 		D6B7C9382B2EC96100A3E1CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D30CE37B3FDA370E863BC791 /* Pods-goodMail.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -324,7 +388,7 @@
 				INFOPLIST_FILE = goodMail/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

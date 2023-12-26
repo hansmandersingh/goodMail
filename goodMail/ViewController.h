@@ -9,6 +9,7 @@
 
 @interface ViewController : UIViewController
 
-
+@property (nonatomic) UIButton *googleSignInButton;
+-(void) toggleDarkMode;
 @end
 
