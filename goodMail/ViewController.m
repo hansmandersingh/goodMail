@@ -24,7 +24,7 @@
     [self toggleDarkMode];
     [self initializationDoneHere];
     
-    [_googleSignInButton setTitle:@"Sign in with google" forState:UIControlStateNormal];
+    [_googleSignInButton setTitle:@"   Sign in with google   " forState:UIControlStateNormal];
     [_googleSignInButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_googleSignInButton setBackgroundColor:[UIColor systemBlueColor]];
     _googleSignInButton.translatesAutoresizingMaskIntoConstraints = NO;

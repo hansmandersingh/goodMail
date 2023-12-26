@@ -18,9 +18,24 @@
     [super viewDidLoad];
     [self toggleDarkMode];
     self.navigationController.navigationBar.prefersLargeTitles = YES;
+    [self addHamburgerMenu];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStyleDone target:self action:@selector(signOutUser)];
     // Do any additional setup after loading the view.
+    
+}
+
+-(void)addHamburgerMenu {
+    NSMutableArray<UIAction *> *menuItems = [[NSMutableArray alloc] init];
+    
+    UIAction *signOutAction = [UIAction actionWithTitle:@"Sign Out" image:[UIImage systemImageNamed:@""] identifier:@"signOut"  handler:^(__kindof UIAction * _Nonnull action) {
+        [self signOutUser];
+    }];
+    [signOutAction setTitle:@"Sign Out"];
+    //[signOutAction performSelector:@selector(signOutUser)];
+    [menuItems addObject:signOutAction];
+    
+    self.menu = [UIMenu menuWithTitle:@"" children:menuItems];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" image:[UIImage systemImageNamed:@"ellipsis.circle"] target:self action:nil menu:self.menu];
 }
 
 -(void)signOutUser {

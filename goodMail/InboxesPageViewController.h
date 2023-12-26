@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface InboxesPageViewController : UIViewController
 
 @property (nonatomic) NSString *titleName;
+@property (nonatomic) UIMenu *menu;
 
 - (id)initWithTitle:(NSString *) withName;
 
