@@ -6,6 +6,7 @@
 //
 
 #import "InboxesPageViewController.h"
+#import <GoogleSignIn/GoogleSignIn.h>
 
 @interface InboxesPageViewController ()
 
@@ -18,7 +19,13 @@
     [self toggleDarkMode];
     self.navigationController.navigationBar.prefersLargeTitles = YES;
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStyleDone target:self action:@selector(signOutUser)];
     // Do any additional setup after loading the view.
+}
+
+-(void)signOutUser {
+    [GIDSignIn.sharedInstance signOut];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (id)initWithTitle:(NSString *) withName
@@ -26,7 +33,7 @@
     self = [super init];
     if (self) {
         NSMutableString *nameString = [NSMutableString stringWithString:withName];
-        [nameString appendString:@"'s mailbox"];
+        [nameString appendString:@"'s Mailbox"];
         self.title = nameString;
     }
     return self;

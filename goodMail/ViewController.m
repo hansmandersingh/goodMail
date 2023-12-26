@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import <GoogleSignIn/GoogleSignIn.h>
 #import "InboxesPageViewController.h"
+#import <GIDGoogleUser.h>
 
 @interface ViewController ()
 
@@ -36,18 +37,30 @@
 }
 
 -(void) signInPart {
-    [GIDSignIn.sharedInstance
-          signInWithPresentingViewController:self
-                                  completion:^(GIDSignInResult * _Nullable signInResult,
-                                               NSError * _Nullable error) {
-        if (error) {
-          return;
-        }
+    if ([GIDSignIn.sharedInstance hasPreviousSignIn]) {
+        [GIDSignIn.sharedInstance restorePreviousSignInWithCompletion:^(GIDGoogleUser * _Nullable user, NSError * _Nullable error) {
+            if(error) {
+                return;
+            }
+            
+            [[self navigationController] pushViewController:[[InboxesPageViewController alloc] initWithTitle:user.profile.familyName] animated:YES];
+        }];
+    } else {
+        [GIDSignIn.sharedInstance
+              signInWithPresentingViewController:self
+                                      completion:^(GIDSignInResult * _Nullable signInResult,
+                                                   NSError * _Nullable error) {
+            if (error) {
+              return;
+            }
 
-        // If sign in succeeded, display the app's main content View.
-        NSLog(@"%@", signInResult.serverAuthCode);
-        [[self navigationController] pushViewController:[[InboxesPageViewController alloc] initWithTitle:signInResult.user.profile.familyName] animated:YES];
-      }];
+            // If sign in succeeded, display the app's main content View.
+            NSLog(@"%@", signInResult.serverAuthCode);
+            [[self navigationController] pushViewController:[[InboxesPageViewController alloc] initWithTitle:signInResult.user.profile.familyName] animated:YES];
+          }];
+    }
+    NSLog(@"%d", [GIDSignIn.sharedInstance hasPreviousSignIn]);
+    
 }
 
 -(void) initializationDoneHere {
